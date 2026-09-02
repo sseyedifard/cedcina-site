@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html class="dark" dir="rtl" lang="fa">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>درباره ما و چشم‌انداز CedCina | داستان برند</title>
+  <meta name="description" content="داستان پیدایش CedCina - تجمل سایبورگ، دقت مهندسی مطلق و تلفیق تکنولوژی مدرن با فریم‌های دست‌ساز." />
+  <meta property="og:title" content="درباره ما | CedCina Luxury Eyewear" />
+  <meta property="og:description" content="تجمل سایبورگ. پالایش شده. داستان برند عینک‌های لوکس تکنولوژیک CedCina." />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#11131b",
+            "surface-dim": "#11131b",
+            "surface-bright": "#373941",
+            "surface-container-lowest": "#0c0e15",
+            "surface-container-low": "#1a1b23",
+            "surface-container": "#1e1f27",
+            "surface-container-high": "#282a32",
+            "surface-container-highest": "#33343d",
+            "on-surface": "#e2e1ed",
+            "on-surface-variant": "#c4c5d7",
+            "outline": "#8e90a0",
+            "outline-variant": "#434654",
+            "primary": "#b6c4ff",
+            "on-primary": "#002780",
+            "primary-container": "#305de3",
+            "on-primary-container": "#e5e8ff",
+            "secondary": "#e1b6ff",
+            "secondary-container": "#6c1ca3",
+            "background": "#11131b",
+            "on-background": "#e2e1ed"
+          },
+          fontFamily: {
+            "body-md": ["Vazirmatn", "sans-serif"],
+            "display-md": ["Vazirmatn", "sans-serif"],
+            "headline-md": ["Vazirmatn", "sans-serif"]
+          },
+          spacing: {
+            "margin-desktop": "64px",
+            "container-max": "1440px",
+            "gutter": "24px"
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+
+  <!-- Header Shared Component -->
+  <header class="fixed top-0 w-full z-50 border-b border-on-surface-variant/10 shadow-[0_0_15px_rgba(182,196,255,0.1)] bg-surface/30 backdrop-blur-xl">
+    <div class="flex justify-between items-center px-4 md:px-margin-desktop h-20 w-full max-w-container-max mx-auto">
+      <div class="flex items-center gap-4">
+        <a class="font-display-md text-2xl md:text-display-md font-bold text-primary tracking-tighter neon-glow" href="index.html">
+          CedCina
+        </a>
+      </div>
+
+      <nav class="hidden md:flex gap-8 items-center">
+        <a class="font-headline-md text-on-surface-variant hover:text-on-surface hover:bg-primary/10 px-4 py-2 rounded-lg transition-colors" href="index.html">صفحه اصلی</a>
+        <a class="font-headline-md text-on-surface-variant hover:text-on-surface hover:bg-primary/10 px-4 py-2 rounded-lg transition-colors" href="products.html">محصولات</a>
+        <a class="font-headline-md text-primary px-4 py-2 rounded-lg transition-colors hover:bg-primary/10" href="about.html">درباره ما</a>
+        <a class="font-headline-md text-on-surface-variant hover:text-on-surface hover:bg-primary/10 px-4 py-2 rounded-lg transition-colors" href="contact.html">تماس</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button data-action="open-search" title="جستجو" class="text-on-surface-variant hover:text-on-surface hover:bg-primary/10 transition-all duration-300 p-2 rounded-full flex items-center justify-center">
+          <span class="material-symbols-outlined text-2xl">search</span>
+        </button>
+        <a href="contact.html" title="پشتیبانی" class="text-on-surface-variant hover:text-on-surface hover:bg-primary/10 transition-all duration-300 p-2 rounded-full hidden sm:flex items-center justify-center">
+          <span class="material-symbols-outlined text-2xl">person</span>
+        </a>
+        <button data-action="open-cart" title="سبد خرید" class="text-on-surface-variant hover:text-on-surface hover:bg-primary/10 transition-all duration-300 p-2 rounded-full flex items-center justify-center relative">
+          <span class="material-symbols-outlined text-2xl">shopping_cart</span>
+          <span class="cart-badge hidden absolute -top-1 -right-1 w-5 h-5 bg-primary-container text-on-primary-container text-[11px] font-bold rounded-full items-center justify-center border border-surface shadow-[0_0_8px_rgba(48,93,227,0.8)]">۰</span>
+        </button>
+        <button id="mobile-menu-btn" class="md:hidden text-on-surface-variant hover:text-on-surface p-2 rounded-lg hover:bg-primary/10">
+          <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="hidden md:hidden bg-surface-container-lowest/95 backdrop-blur-xl border-b border-outline-variant/20 px-6 py-4 space-y-3">
+      <a class="block text-on-surface-variant hover:text-primary py-2 text-base" href="index.html">صفحه اصلی</a>
+      <a class="block text-on-surface-variant hover:text-primary py-2 text-base" href="products.html">محصولات</a>
+      <a class="block text-primary py-2 text-base font-semibold" href="about.html">درباره ما</a>
+      <a class="block text-on-surface-variant hover:text-primary py-2 text-base" href="contact.html">تماس با ما</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="w-full pt-36 pb-20 px-4 md:px-margin-desktop max-w-container-max mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 flex flex-col items-start gap-6">
+        <span class="px-4 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/30">
+          چشم‌انداز ما
+        </span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-on-surface leading-tight">
+          تجمل سایبورگ.<br/>
+          <span class="text-primary neon-text-glow">پالایش شده.</span>
+        </h1>
+        <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-2xl">
+          برند CedCina در تقاطع هنر مهندسی دقیق و زیبایی‌شناسی تاریک متولد شد. ما به ابزارهایی باور داریم که به امتدادی یکپارچه از هویت پیشرو و مدرن شما تبدیل می‌شوند.
+        </p>
+        <div class="flex items-center gap-6 pt-4">
+          <div>
+            <span class="block text-3xl font-black text-primary">۹۹.۸٪</span>
+            <span class="text-xs text-on-surface-variant">رضایت جهانی</span>
+          </div>
+          <div class="w-px h-10 bg-outline-variant/30"></div>
+          <div>
+            <span class="block text-3xl font-black text-secondary">+۱۵</span>
+            <span class="text-xs text-on-surface-variant">نوآوری اپتیکال</span>
+          </div>
+          <div class="w-px h-10 bg-outline-variant/30"></div>
+          <div>
+            <span class="block text-3xl font-black text-on-surface">۱۰۰٪</span>
+            <span class="text-xs text-on-surface-variant">تیتانیوم گرید فضا</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="relative rounded-3xl overflow-hidden glass-panel border border-primary/30 shadow-[0_0_40px_rgba(182,196,255,0.15)] group">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-lj54zTb7PQZHc3nNLWwnYJSvE4CtIAzvg0j7YY1Ig8s2TlYcE3_5L3ojtrOZas02HSt1HmXqhDpfR86n92RGWpJ762EkHk4JWa2rmQTwPcX4MkwabvYCvund-52z4FbMhAcVKr3_AdF_C-iZ4TBYFyZPYPL1WKq_JMOWwfDNzaYFGeFR27FB_Q_0kjuhawSro1z6gau-yO9BIjU--FWjq6bmvsd6kTsJ2PjGOY9AjejTJzkEzE4v" alt="ماکرو شات عینک لوکس CedCina" class="w-full h-[420px] object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 right-6 left-6 text-right">
+            <span class="text-xs text-primary font-mono tracking-widest uppercase">PRECISION CRAFTSMANSHIP</span>
+            <h4 class="text-base font-bold text-on-surface mt-1">طراحی میلی‌متری لولاهای آیرودینامیک</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bento Grid Story Section -->
+  <section class="w-full py-20 bg-surface-container-lowest border-y border-outline-variant/20">
+    <div class="max-w-container-max mx-auto px-4 md:px-margin-desktop">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-on-surface">اصول ساخت در CedCina</h2>
+        <p class="text-sm text-on-surface-variant mt-2">هر فریم بازتابی از تعهد ما به مرزهای مهندسی مواد و اپتیک پیشرفته است.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+        <!-- Bento 1: Large Image Feature -->
+        <div class="md:col-span-2 rounded-2xl glass-panel overflow-hidden relative p-8 flex flex-col justify-end min-h-[380px] group neon-glow-hover">
+          <div class="absolute inset-0 z-0 bg-cover bg-center opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXhpuywFT3zajBkcQ2bD33RN8y04GXGg__f460zCr-aJs5vyFURfxdzPAWJiwFTyzhi2MaD7PDtKP6K7bFgMO628wBfzzmBzsObVGO2otKG45X5A6vrTpk42-C-Ec--OaRddQeQHav32aYYOsalQeK-YzWntDOXeIRHDa1a2aYppdBlPEfdcTDSTGVerSuRqdcS0We3r3plyfp0vd4s8rqSHJ8DLOQZv7V81kSAm1BP-n5pE5yxrDq')"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent z-10"></div>
+          <div class="relative z-20 max-w-xl">
+            <span class="text-primary text-xs font-mono font-semibold tracking-wider">ریشه‌های طراحی</span>
+            <h3 class="text-2xl md:text-3xl font-bold text-on-surface mt-2 mb-3">متولد تاریکی، ساخته شده برای روشنایی</h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed">
+              ما عینک را صرفاً ابزاری برای پنهان شدن نمی‌بینیم، بلکه سپری پیشرفته برای تسلط بر کنتراست‌های نوری دنیای امروز می‌دانیم. تمامی مدل‌ها در کارگاه‌های اختصاصی و تحت نظارت دقیق اپتومتریست‌های صنعتی ساخته می‌شوند.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bento 2: Absolute Precision -->
+        <div class="glass-panel p-8 rounded-2xl flex flex-col justify-between neon-glow-hover">
+          <div class="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary mb-6">
+            <span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-on-surface mb-3">دقت ساخت مطلق</h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed">
+              تلورانس انحنا و تراش کمتر از ۰.۰۱ میلی‌متر با ماشین‌کاری ۵ محوره CNC و به‌کارگیری آلیاژ تیتانیوم فضایی گرید ۵.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-outline-variant/20 mt-6 flex items-center justify-between text-xs text-primary font-mono">
+            <span>TOLERANCE &lt; 0.01MM</span>
+            <span class="material-symbols-outlined text-sm">verified</span>
+          </div>
+        </div>
+
+        <!-- Bento 3: Sustainable Futurism -->
+        <div class="glass-panel p-8 rounded-2xl flex flex-col justify-between neon-glow-hover">
+          <div class="w-14 h-14 rounded-2xl bg-secondary/10 border border-secondary/30 flex items-center justify-center text-secondary mb-6">
+            <span class="material-symbols-outlined text-3xl">recycling</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-on-surface mb-3">آینده‌گرایی پایدار</h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed">
+              استفاده از رزین‌های زیستی ارگانیک و پلیمرهای بدون آلاینده در بسته‌بندی و فریم‌ها در جهت ادای احترام به اقلیم زمین.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-outline-variant/20 mt-6 flex items-center justify-between text-xs text-secondary font-mono">
+            <span>100% ECO-CONSCIOUS</span>
+            <span class="material-symbols-outlined text-sm">spa</span>
+          </div>
+        </div>
+
+        <!-- Bento 4: Advanced Optics -->
+        <div class="md:col-span-2 glass-panel p-8 rounded-2xl flex flex-col md:flex-row items-center gap-8 neon-glow-hover">
+          <div class="w-20 h-20 shrink-0 rounded-2xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-4xl">visibility</span>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-2xl font-bold text-on-surface mb-2">اپتیک فوق پیشرفته هفت لایه</h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed">
+              لنزهای سفارشی CedCina مجهز به لایه آب‌گریز اولترافوبیک، مسدودکننده نور آبی مضر نمایشگرها (Blue-Blocker) و فیلتر اشعه فرابنفش تا ۴۰۰ نانومتر هستند که دیدی با کنتراست شفاف و بدون خستگی چشم به ارمغان می‌آورند.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="w-full py-24 px-4 md:px-margin-desktop max-w-container-max mx-auto text-center">
+    <div class="glass-panel p-12 rounded-3xl max-w-3xl mx-auto border border-primary/30 relative overflow-hidden">
+      <div class="relative z-10 flex flex-col items-center gap-6">
+        <h2 class="text-3xl md:text-4xl font-black text-on-surface">
+          آماده پیوستن به خانواده CedCina هستید؟
+        </h2>
+        <p class="text-base text-on-surface-variant max-w-lg leading-relaxed">
+          کلکسیون منتخب ما را کاوش کنید و یا جهت مشاوره اختصاصی فریم با متخصصان طراحی ما تماس حاصل فرمایید.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center mt-2">
+          <a href="products.html" class="bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary font-bold px-8 py-3.5 rounded-xl btn-primary-glow transition-all">
+            مشاهده کلکسیون عینک‌ها
+          </a>
+          <a href="contact.html" class="glass-panel hover:bg-primary/10 text-primary font-bold px-8 py-3.5 rounded-xl transition-all">
+            ارتباط و مشاوره
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Shared Component -->
+  <footer class="bg-surface-container-lowest w-full py-16 px-4 md:px-margin-desktop border-t border-outline-variant/20">
+    <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter direction-rtl text-right">
+      <div class="flex flex-col gap-4 items-start">
+        <div class="text-3xl font-black text-primary neon-glow">CedCina</div>
+        <p class="text-sm text-on-surface-variant max-w-xs leading-relaxed">
+          تغییر آینده عینک‌های لوکس از طریق دقت فنی، متریال‌های فضایی و تسلط بر زیبایی‌شناسی.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-3 items-start">
+        <h4 class="text-base font-bold text-on-surface mb-2">قوانین</h4>
+        <a class="text-sm text-on-surface-variant hover:text-secondary transition-all" href="about.html">حریم خصوصی</a>
+        <a class="text-sm text-on-surface-variant hover:text-secondary transition-all" href="about.html">شرایط استفاده</a>
+      </div>
+
+      <div class="flex flex-col gap-3 items-start">
+        <h4 class="text-base font-bold text-on-surface mb-2">پشتیبانی</h4>
+        <a class="text-sm text-on-surface-variant hover:text-secondary transition-all" href="contact.html">ارسال و بازگشت</a>
+        <a class="text-sm text-on-surface-variant hover:text-secondary transition-all" href="contact.html">سوالات متداول</a>
+      </div>
+
+      <div class="flex flex-col gap-3 items-start">
+        <h4 class="text-base font-bold text-on-surface mb-2">همراه ما باشید</h4>
+        <p class="text-xs text-on-surface-variant">عضویت در خبرنامه کلکسیون‌های فصلی:</p>
+        <div class="w-full mt-2 relative">
+          <input class="w-full bg-surface-container-low border border-outline-variant/50 rounded-lg px-4 py-3 text-sm text-on-surface focus:outline-none focus:border-primary transition-colors text-left" dir="ltr" placeholder="ایمیل خود را وارد کنید" type="email"/>
+          <button class="absolute top-1 left-1 bottom-1 bg-primary text-on-primary px-3 rounded-md hover:bg-primary-fixed transition-colors flex items-center justify-center" onclick="showToast('ایمیل شما با موفقیت در خبرنامه ثبت گردید.')">
+            <span class="material-symbols-outlined text-sm">arrow_back</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-span-1 md:col-span-4 mt-12 pt-8 border-t border-outline-variant/10 text-center md:text-right flex flex-col md:flex-row justify-between items-center gap-4">
+        <span class="text-xs text-on-surface-variant">© 2024 CedCina Luxury Eyewear. تمامی حقوق محفوظ است.</span>
+        <span class="text-xs text-primary/80">آماده استقرار مستقیم روی GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla Core Script -->
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html class="dark" dir="rtl" lang="fa">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>محصولات و کلکسیون عینک‌ها | CedCina</title>
+  <meta name="description" content="مشاهده و خرید آنلاین انواع عینک‌های آفتابی، طبی و فریم‌های لیمیتد ادیشن CedCina با پشتیبانی و سفارش مستقیم تلگرام." />
+  <meta property="og:title" content="محصولات و کلکسیون عینک‌ها | CedCina" />
+  <meta property="og:description" content="مشاهده و خرید آنلاین انواع عینک‌های آفتابی، طبی و فریم‌های لیمیتد ادیشن CedCina." />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#11131b",
+            "surface-dim": "#11131b",
+            "surface-bright": "#373941",
+            "surface-container-lowest": "#0c0e15",
+            "surface-container-low": "#1a1b23",
+            "surface-container": "#1e1f27",
+            "surface-container-high": "#282a32",
+            "surface-container-highest": "#33343d",
+            "on-surface": "#e2e1ed",
+            "on-surface-variant": "#c4c5d7",
+            "outline": "#8e90a0",
+            "outline-variant": "#434654",
+            "primary": "#b6c4ff",
+            "on-primary": "#002780",
+            "primary-container": "#305de3",
+            "on-primary-container": "#e5e8ff",
+            "secondary": "#e1b6ff",
+            "secondary-container": "#6c1ca3",
+            "background": "#11131b",
+            "on-background": "#e2e1ed"
+          },
+          fontFamily: {
+            "body-md": ["Vazirmatn", "sans-serif"],
+            "display-md": ["Vazirmatn", "sans-serif"],
+            "headline-md": ["Vazirmatn", "sans-serif"]
+          },
+          spacing: {
+            "margin-desktop": "64px",
+            "container-max": "1440px",
+            "gutter": "24px"
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+
+  <!-- Header Shared Component -->
+  <header class="fixed top-0 w-full z-50 border-b border-on-surface-variant/10 shadow-[0_0_15px_rgba(182,196,255,0.1)] bg-surface/30 backdrop-blur-xl">
+    <div class="flex justify-between items-center px-4 md:px-margin-desktop h-20 w-full max-w-container-max mx-auto">
+      <div class="flex items-center gap-4">
+        <a class="font-display-md text-2xl md:text-display-md font-bold text-primary tracking-tighter neon-glow" href="index.html">
+          CedCina
+        </a>
+      </div>
+
+      <nav class="hidden md:flex gap-8 items-center">
+        <a class="font-headline-md text-on-surface-variant hover:text-on-surface hover:bg-primary/10 px-4 py-2 rounded-lg transition-colors" href="index.html">صفحه اصلی</a>
+        <a class="font-headline-md text-primary px-4 py-2 rounded-lg transition-colors hover:bg-primary/10" href="products.html">محصولات</a>
+        <a class="font-headline-md text-on-surface-variant hover:text-on-surface hover:bg-primary/10 px-4 py-2 rounded-lg transition-colors" href="about.html">درباره ما</a>
+        <a class="font-headline-md text-on-surface-variant hover:text-on-surface hover:bg-primary/10 px-4 py-2 rounded-lg transition-colors" href="contact.html">تماس</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button data-action="open-search" title="جستجو" class="text-on-surface-variant hover:text-on-surface hover:bg-primary/10 transition-all duration-300 p-2 rounded-full flex items-center justify-center">
+          <span class="material-symbols-outlined text-2xl">search</span>
+        </button>
+        <a href="contact.html" title="پشتیبانی" class="text-on-surface-variant hover:text-on-surface hover:bg-primary/10 transition-all duration-300 p-2 rounded-full hidden sm:flex items-center justify-center">
+          <span class="material-symbols-outlined text-2xl">person</span>
+        </a>
+        <button data-action="open-cart" title="سبد خرید" class="text-on-surface-variant hover:text-on-surface hover:bg-primary/10 transition-all duration-300 p-2 rounded-full flex items-center justify-center relative">
+          <span class="material-symbols-outlined text-2xl">shopping_cart</span>
+          <span class="cart-badge hidden absolute -top-1 -right-1 w-5 h-5 bg-primary-container text-on-primary-container text-[11px] font-bold rounded-full items-center justify-center border border-surface shadow-[0_0_8px_rgba(48,93,227,0.8)]">۰</span>
+        </button>
+        <button id="mobile-menu-btn" class="md:hidden text-on-surface-variant hover:text-on-surface p-2 rounded-lg hover:bg-primary/10">
+          <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="hidden md:hidden bg-surface-container-lowest/95 backdrop-blur-xl border-b border-outline-variant/20 px-6 py-4 space-y-3">
+      <a class="block text-on-surface-variant hover:text-primary py-2 text-base" href="index.html">صفحه اصلی</a>
+      <a class="block text-primary py-2 text-base font-semibold" href="products.html">محصولات</a>
+      <a class="block text-on-surface-variant hover:text-primary py-2 text-base" href="about.html">درباره ما</a>
+      <a class="block text-on-surface-variant hover:text-primary py-2 text-base" href="contact.html">تماس با ما</a>
+    </div>
+  </header>
+
+  <!-- Products Main Content -->
+  <main class="w-full pt-32 pb-24 px-4 md:px-margin-desktop max-w-container-max mx-auto">
+    <!-- Header Title & Filter Bar -->
+    <div class="flex flex-col gap-6 mb-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-outline-variant/20 pb-6">
+        <div>
+          <span class="text-xs text-primary font-semibold tracking-wider">کلکسیون جامع</span>
+          <h1 class="text-3xl md:text-4xl font-bold text-on-surface mt-1">محصولات CedCina</h1>
+        </div>
+        <p class="text-sm text-on-surface-variant max-w-md">
+          فریم‌های مهندسی شده با پیشرفته‌ترین لنزهای اپتیکال و زیبایی‌شناسی سایبرپانک.
+        </p>
+      </div>
+
+      <!-- Filters & Search Controls -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+        <!-- Search Input -->
+        <div class="md:col-span-6 relative">
+          <input id="products-search-input" type="text" placeholder="جستجو در محصولات..." class="w-full bg-surface-container-low border border-outline-variant/30 rounded-xl px-4 py-3 pr-11 text-sm text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:border-primary transition-colors">
+          <span class="material-symbols-outlined text-outline-variant absolute right-3 top-3.5 text-xl">search</span>
+        </div>
+
+        <!-- Frame Type Selector -->
+        <div class="md:col-span-3">
+          <select id="frame-type-select" class="w-full bg-surface-container-low border border-outline-variant/30 rounded-xl px-4 py-3 text-sm text-on-surface focus:outline-none focus:border-primary transition-colors">
+            <option value="all">همه فریم‌ها</option>
+            <option value="aviator">خلبانی (Aviator)</option>
+            <option value="wayfarer">ویفرر (Wayfarer)</option>
+            <option value="round">گرد (Round)</option>
+            <option value="shield">شیلد (Cyber Shield)</option>
+          </select>
+        </div>
+
+        <!-- Price Range Selector -->
+        <div class="md:col-span-3">
+          <select id="price-range-select" class="w-full bg-surface-container-low border border-outline-variant/30 rounded-xl px-4 py-3 text-sm text-on-surface focus:outline-none focus:border-primary transition-colors">
+            <option value="all">محدوده قیمت (همه)</option>
+            <option value="under-1m">زیر ۱,۰۰۰,۰۰۰ تومان</option>
+            <option value="1m-3m">۱ تا ۳ میلیون تومان</option>
+            <option value="above-3m">بالای ۳,۰۰۰,۰۰۰ تومان</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-2 hide-scrollbar">
+        <button data-cat="all" class="cat-pill px-4 py-1.5 rounded-full text-xs font-semibold bg-primary text-on-primary shadow-[0_0_12px_rgba(182,196,255,0.4)] transition-all">همه</button>
+        <button data-cat="sunglasses" class="cat-pill px-4 py-1.5 rounded-full text-xs font-semibold glass-panel text-on-surface hover:text-primary transition-all">عینک آفتابی</button>
+        <button data-cat="prescription" class="cat-pill px-4 py-1.5 rounded-full text-xs font-semibold glass-panel text-on-surface hover:text-primary transition-all">عینک طبی</button>
+        <button data-cat="special" class="cat-pill px-4 py-1.5 rounded-full text-xs font-semibold glass-panel text-on-surface hover:text-primary transition-all">فریم‌های خاص</button>
+      </div>
+    </div>
+
+    <!-- Dynamic Product Cards Grid -->
+    <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="products-empty" class="hidden text-center py-20 flex-col items-center gap-4">
+      <span class="material-symbols-outlined text-5xl text-outline">search_off</span>
+      <h3 class="text-xl font-bold text-on-surface">محصولی با این مشخصات یافت نشد</h3>
+      <p class="text-sm text-on-surface-variant">لطفاً فیلترها را تغییر داده یا واژه جستجوی دیگری را امتحان کنید.</p>
+      <button id="reset-filters-btn" class="mt-2 bg-primary/20 hover:bg-primary/30 text-primary border border-primary/40 px-6 py-2 rounded-lg text-sm transition-colors">
+        بازنشانی فیلترها
+      </button>
+    </div>
+
+    <!-- Pagination -->
+    <div class="flex justify-center items-center gap-2 mt-16">
+      <button class="w-10 h-10 rounded-lg glass-panel text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors">
+        <span class="material-symbols-outlined text-sm">chevron_right</span>
+      </button>
+      <button class="w-10 h-10 rounded-lg bg-primary text-on-primary font-bold text-sm shadow-[0_0_12px_rgba(182,196,255,0.4)]">۱</button>
+      <button class="w-10 h-10 rounded-lg glass-panel text-on-surface hover:text-primary font-bold text-sm transition-colors">۲</button>
+      <button class="w-10 h-10 rounded-lg glass-panel text-on-surface hover:text-primary font-bold text-sm transition-colors">۳</button>
+      <button class="w-10 h-10 rounded-lg glass-panel text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors">
+        <span class="material-symbols-outlined text-sm">chevron_left</span>
+      </button>
+    </div>
+  </main>
+
+  <!-- Footer Shared Component -->
+  <footer class="bg-surface-container-lowest w-full py-16 px-4 md:px-margin-desktop border-t border-outline-variant/20">
+    <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter direction-rtl text-right">
+      <div class="flex flex-col gap-4 items-start">
+        <div class="text-3xl font-black text-primary neon-glow">CedCina</div>
+        <p class="text-sm text-on-surface-variant max-w-xs leading-relaxed">
+          تغییر آینده عینک‌های لوکس از طریق دقت فنی، متریال‌های فضایی و تسلط بر زیبایی‌شناسی.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-3 items-start">
+        <h4 class="text-base font-bold text-on-surface mb-2">قوانین</h4>
+        <a class="text-sm text-on-surface-variant hover:text-secondary transition-all" href="about.html">حریم خصوصی</a>
+        <a class="text-sm text-on-surface-variant hover:text-secondary transition-all" href="about.html">شرایط استفاده</a>
+      </div>
+
+      <div class="flex flex-col gap-3 items-start">
+        <h4 class="text-base font-bold text-on-surface mb-2">پشتیبانی</h4>
+        <a class="text-sm text-on-surface-variant hover:text-secondary transition-all" href="contact.html">ارسال و بازگشت</a>
+        <a class="text-sm text-on-surface-variant hover:text-secondary transition-all" href="contact.html">سوالات متداول</a>
+      </div>
+
+      <div class="flex flex-col gap-3 items-start">
+        <h4 class="text-base font-bold text-on-surface mb-2">همراه ما باشید</h4>
+        <p class="text-xs text-on-surface-variant">عضویت در خبرنامه کلکسیون‌های فصلی:</p>
+        <div class="w-full mt-2 relative">
+          <input class="w-full bg-surface-container-low border border-outline-variant/50 rounded-lg px-4 py-3 text-sm text-on-surface focus:outline-none focus:border-primary transition-colors text-left" dir="ltr" placeholder="ایمیل خود را وارد کنید" type="email"/>
+          <button class="absolute top-1 left-1 bottom-1 bg-primary text-on-primary px-3 rounded-md hover:bg-primary-fixed transition-colors flex items-center justify-center" onclick="showToast('ایمیل شما با موفقیت در خبرنامه ثبت گردید.')">
+            <span class="material-symbols-outlined text-sm">arrow_back</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-span-1 md:col-span-4 mt-12 pt-8 border-t border-outline-variant/10 text-center md:text-right flex flex-col md:flex-row justify-between items-center gap-4">
+        <span class="text-xs text-on-surface-variant">© 2024 CedCina Luxury Eyewear. تمامی حقوق محفوظ است.</span>
+        <span class="text-xs text-primary/80">آماده استقرار مستقیم روی GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla Core Script -->
+  <script src="assets/app.js"></script>
+
+  <!-- Page-specific Products Engine -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let currentCategory = 'all';
+      let currentFrame = 'all';
+      let currentPrice = 'all';
+      let searchQuery = '';
+
+      const grid = document.getElementById('products-grid');
+      const emptyState = document.getElementById('products-empty');
+      const searchInput = document.getElementById('products-search-input');
+      const frameSelect = document.getElementById('frame-type-select');
+      const priceSelect = document.getElementById('price-range-select');
+      const catPills = document.querySelectorAll('.cat-pill');
+      const resetBtn = document.getElementById('reset-filters-btn');
+
+      // Check URL search params for initial category (e.g., ?category=sunglasses)
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlCat = urlParams.get('category');
+      if (urlCat) {
+        currentCategory = urlCat;
+        updateCatPillStyles();
+      }
+
+      function updateCatPillStyles() {
+        catPills.forEach(pill => {
+          if (pill.getAttribute('data-cat') === currentCategory) {
+            pill.className = 'cat-pill px-4 py-1.5 rounded-full text-xs font-semibold bg-primary text-on-primary shadow-[0_0_12px_rgba(182,196,255,0.4)] transition-all';
+          } else {
+            pill.className = 'cat-pill px-4 py-1.5 rounded-full text-xs font-semibold glass-panel text-on-surface hover:text-primary transition-all';
+          }
+        });
+      }
+
+      function renderProducts() {
+        const filtered = PRODUCTS_CATALOG.filter(item => {
+          // Category filter
+          if (currentCategory !== 'all' && item.category !== currentCategory) return false;
+          // Frame filter
+          if (currentFrame !== 'all' && item.frameType !== currentFrame) return false;
+          // Price filter
+          if (currentPrice === 'under-1m' && item.price >= 1000000) return false;
+          if (currentPrice === '1m-3m' && (item.price < 1000000 || item.price > 3000000)) return false;
+          if (currentPrice === 'above-3m' && item.price <= 3000000) return false;
+          // Search query
+          if (searchQuery) {
+            const q = searchQuery.toLowerCase();
+            const matches = item.name.toLowerCase().includes(q) || item.description.toLowerCase().includes(q);
+            if (!matches) return false;
+          }
+          return true;
+        });
+
+        if (filtered.length === 0) {
+          grid.innerHTML = '';
+          emptyState.classList.remove('hidden');
+          emptyState.classList.add('flex');
+          return;
+        }
+
+        emptyState.classList.add('hidden');
+        emptyState.classList.remove('flex');
+
+        grid.innerHTML = filtered.map(item => `
+          <div class="glass-panel p-5 rounded-2xl flex flex-col justify-between neon-glow-hover transition-all duration-300 group">
+            <div>
+              <div class="h-60 rounded-xl bg-surface-container-high relative overflow-hidden flex items-center justify-center mb-4">
+                <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                ${item.badge ? `
+                  <span class="absolute top-3 right-3 px-3 py-1 bg-primary-container text-on-primary-container rounded-full text-xs font-bold border border-primary/30 shadow-md">
+                    ${item.badge}
+                  </span>
+                ` : ''}
+              </div>
+              <h3 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">${item.name}</h3>
+              <p class="text-xs text-on-surface-variant line-clamp-2 mt-2 leading-relaxed">${item.description}</p>
+            </div>
+            
+            <div class="mt-6 pt-4 border-t border-outline-variant/20">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs text-on-surface-variant">قیمت:</span>
+                <span class="text-base font-bold text-primary">${item.priceFormatted}</span>
+              </div>
+              <div class="flex gap-2">
+                <button data-add-to-cart="${item.id}" class="bg-primary/20 hover:bg-primary/30 text-primary border border-primary/40 py-2.5 px-3 rounded-xl transition-all flex-1 text-xs font-semibold flex items-center justify-center gap-1">
+                  <span class="material-symbols-outlined text-base">add_shopping_cart</span>
+                  <span>افزودن</span>
+                </button>
+                <button onclick="quickOrderTelegram('${item.id}')" title="سفارش سریع در تلگرام" class="glass-panel hover:bg-primary/20 text-on-surface p-2.5 rounded-xl border border-outline-variant/40 transition-colors flex items-center justify-center">
+                  <svg class="w-4 h-4 fill-primary" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.77-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .42z"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Filter events
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value.trim();
+        renderProducts();
+      });
+
+      frameSelect.addEventListener('change', (e) => {
+        currentFrame = e.target.value;
+        renderProducts();
+      });
+
+      priceSelect.addEventListener('change', (e) => {
+        currentPrice = e.target.value;
+        renderProducts();
+      });
+
+      catPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          currentCategory = pill.getAttribute('data-cat');
+          updateCatPillStyles();
+          renderProducts();
+        });
+      });
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          currentCategory = 'all';
+          currentFrame = 'all';
+          currentPrice = 'all';
+          searchQuery = '';
+          searchInput.value = '';
+          frameSelect.value = 'all';
+          priceSelect.value = 'all';
+          updateCatPillStyles();
+          renderProducts();
+        });
+      }
+
+      // Initial Render
+      renderProducts();
+    });
+  </script>
+</body>
+</html>

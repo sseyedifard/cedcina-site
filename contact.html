@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html class="dark" dir="rtl" lang="fa">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>تماس و پشتیبانی مشتریان | CedCina</title>
+  <meta name="description" content="ارتباط با بخش فروش، خدمات مشتریان و پشتیبانی سفارش‌های تلگرام برند عینک لوکس CedCina." />
+  <meta property="og:title" content="تماس و پشتیبانی | CedCina Luxury Eyewear" />
+  <meta property="og:description" content="فرم تماس مستقیم و ارتباط سریع با پشتیبانی تلگرام CedCina." />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#11131b",
+            "surface-dim": "#11131b",
+            "surface-bright": "#373941",
+            "surface-container-lowest": "#0c0e15",
+            "surface-container-low": "#1a1b23",
+            "surface-container": "#1e1f27",
+            "surface-container-high": "#282a32",
+            "surface-container-highest": "#33343d",
+            "on-surface": "#e2e1ed",
+            "on-surface-variant": "#c4c5d7",
+            "outline": "#8e90a0",
+            "outline-variant": "#434654",
+            "primary": "#b6c4ff",
+            "on-primary": "#002780",
+            "primary-container": "#305de3",
+            "on-primary-container": "#e5e8ff",
+            "secondary": "#e1b6ff",
+            "secondary-container": "#6c1ca3",
+            "background": "#11131b",
+            "on-background": "#e2e1ed"
+          },
+          fontFamily: {
+            "body-md": ["Vazirmatn", "sans-serif"],
+            "display-md": ["Vazirmatn", "sans-serif"],
+            "headline-md": ["Vazirmatn", "sans-serif"]
+          },
+          spacing: {
+            "margin-desktop": "64px",
+            "container-max": "1440px",
+            "gutter": "24px"
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+
+  <!-- Header Shared Component -->
+  <header class="fixed top-0 w-full z-50 border-b border-on-surface-variant/10 shadow-[0_0_15px_rgba(182,196,255,0.1)] bg-surface/30 backdrop-blur-xl">
+    <div class="flex justify-between items-center px-4 md:px-margin-desktop h-20 w-full max-w-container-max mx-auto">
+      <div class="flex items-center gap-4">
+        <a class="font-display-md text-2xl md:text-display-md font-bold text-primary tracking-tighter neon-glow" href="index.html">
+          CedCina
+        </a>
+      </div>
+
+      <nav class="hidden md:flex gap-8 items-center">
+        <a class="font-headline-md text-on-surface-variant hover:text-on-surface hover:bg-primary/10 px-4 py-2 rounded-lg transition-colors" href="index.html">صفحه اصلی</a>
+        <a class="font-headline-md text-on-surface-variant hover:text-on-surface hover:bg-primary/10 px-4 py-2 rounded-lg transition-colors" href="products.html">محصولات</a>
+        <a class="font-headline-md text-on-surface-variant hover:text-on-surface hover:bg-primary/10 px-4 py-2 rounded-lg transition-colors" href="about.html">درباره ما</a>
+        <a class="font-headline-md text-primary px-4 py-2 rounded-lg transition-colors hover:bg-primary/10" href="contact.html">تماس</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button data-action="open-search" title="جستجو" class="text-on-surface-variant hover:text-on-surface hover:bg-primary/10 transition-all duration-300 p-2 rounded-full flex items-center justify-center">
+          <span class="material-symbols-outlined text-2xl">search</span>
+        </button>
+        <a href="contact.html" title="پشتیبانی" class="text-primary hover:text-on-surface hover:bg-primary/10 transition-all duration-300 p-2 rounded-full hidden sm:flex items-center justify-center">
+          <span class="material-symbols-outlined text-2xl">person</span>
+        </a>
+        <button data-action="open-cart" title="سبد خرید" class="text-on-surface-variant hover:text-on-surface hover:bg-primary/10 transition-all duration-300 p-2 rounded-full flex items-center justify-center relative">
+          <span class="material-symbols-outlined text-2xl">shopping_cart</span>
+          <span class="cart-badge hidden absolute -top-1 -right-1 w-5 h-5 bg-primary-container text-on-primary-container text-[11px] font-bold rounded-full items-center justify-center border border-surface shadow-[0_0_8px_rgba(48,93,227,0.8)]">۰</span>
+        </button>
+        <button id="mobile-menu-btn" class="md:hidden text-on-surface-variant hover:text-on-surface p-2 rounded-lg hover:bg-primary/10">
+          <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="hidden md:hidden bg-surface-container-lowest/95 backdrop-blur-xl border-b border-outline-variant/20 px-6 py-4 space-y-3">
+      <a class="block text-on-surface-variant hover:text-primary py-2 text-base" href="index.html">صفحه اصلی</a>
+      <a class="block text-on-surface-variant hover:text-primary py-2 text-base" href="products.html">محصولات</a>
+      <a class="block text-on-surface-variant hover:text-primary py-2 text-base" href="about.html">درباره ما</a>
+      <a class="block text-primary py-2 text-base font-semibold" href="contact.html">تماس با ما</a>
+    </div>
+  </header>
+
+  <!-- Contact Main Content -->
+  <main class="w-full pt-36 pb-24 px-4 md:px-margin-desktop max-w-container-max mx-auto">
+    <!-- Header Title -->
+    <div class="max-w-2xl mb-12">
+      <span class="text-xs text-primary font-semibold tracking-wider">مرکز ارتباط و پشتیبانی</span>
+      <h1 class="text-3xl md:text-5xl font-black text-on-surface mt-2 mb-4">تماس با CedCina</h1>
+      <p class="text-base text-on-surface-variant leading-relaxed">
+        تیم پاسخگویی و مشاوران فنی عینک‌های لوکس CedCina به صورت شبانه‌روزی آماده ثبت سفارش، مشاوره فریم مناسب چهره و پاسخ به پرسش‌های شما هستند.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <!-- Contact Form Column -->
+      <div class="lg:col-span-7 glass-panel p-8 md:p-10 rounded-3xl border border-outline-variant/30 relative">
+        <h2 class="text-2xl font-bold text-on-surface mb-6">ارسال پیام یا ثبت درخواست</h2>
+        
+        <form id="contact-form" class="space-y-6" onsubmit="return false;">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="contact-name" class="block text-xs font-semibold text-on-surface-variant mb-2">نام و نام خانوادگی *</label>
+              <input id="contact-name" type="text" required placeholder="مثال: آرش کیانی" class="w-full bg-surface-container-low border border-outline-variant/40 rounded-xl px-4 py-3 text-sm text-on-surface focus:outline-none focus:border-primary transition-colors">
+            </div>
+            <div>
+              <label for="contact-email" class="block text-xs font-semibold text-on-surface-variant mb-2">آدرس ایمیل *</label>
+              <input id="contact-email" type="email" dir="ltr" required placeholder="name@example.com" class="w-full bg-surface-container-low border border-outline-variant/40 rounded-xl px-4 py-3 text-sm text-on-surface focus:outline-none focus:border-primary transition-colors text-left">
+            </div>
+          </div>
+
+          <div>
+            <label for="contact-subject" class="block text-xs font-semibold text-on-surface-variant mb-2">موضوع درخواست</label>
+            <select id="contact-subject" class="w-full bg-surface-container-low border border-outline-variant/40 rounded-xl px-4 py-3 text-sm text-on-surface focus:outline-none focus:border-primary transition-colors">
+              <option value="موجودی و قیمت محصول">استعلام موجودی و قیمت فریم خاص</option>
+              <option value="سفارش لنز طبی سفارشی">سفارش لنز با نمره و ویژگی‌های سفارشی</option>
+              <option value="پیگیری سفارش قبلی">پیگیری وضعیت ارسال بسته پستی</option>
+              <option value="همکاری تجاری یا نمایندگی">پیشنهاد همکاری یا نمایندگی</option>
+              <option value="سایر موارد">سایر موضوعات</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="contact-message" class="block text-xs font-semibold text-on-surface-variant mb-2">متن پیام یا توضیحات سفارش *</label>
+            <textarea id="contact-message" rows="5" required placeholder="پیام، نام مدل مد نظر، یا نمره چشم خود را شرح دهید..." class="w-full bg-surface-container-low border border-outline-variant/40 rounded-xl p-4 text-sm text-on-surface focus:outline-none focus:border-primary transition-colors leading-relaxed"></textarea>
+          </div>
+
+          <div class="pt-2 flex flex-col sm:flex-row gap-4">
+            <button id="send-telegram-btn" type="button" class="flex-1 bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary font-bold py-3.5 px-6 rounded-xl btn-primary-glow flex items-center justify-center gap-2 transition-all">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.77-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .42z"/></svg>
+              <span>ارسال مستقیم پیام در تلگرام</span>
+            </button>
+            <button id="submit-site-btn" type="button" class="glass-panel text-primary hover:bg-primary/10 font-semibold py-3.5 px-6 rounded-xl transition-all">
+              ثبت در سامانه سایت
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Contact Info Cards Column -->
+      <div class="lg:col-span-5 space-y-6">
+        <!-- Direct Headquarters Card -->
+        <div class="glass-panel p-8 rounded-3xl border border-outline-variant/30 space-y-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary">
+              <span class="material-symbols-outlined text-2xl">location_on</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-on-surface">دفتر مرکزی و طراحی بین‌المللی</h3>
+              <p class="text-xs text-on-surface-variant">CedCina Cyber-Luxury Studio</p>
+            </div>
+          </div>
+          <p class="text-sm text-on-surface-variant leading-relaxed">
+            برج نئو CedCina، طبقه ۴۲، بخش استودیوهای اپتیک پیشرفته، توکیو، ژاپن
+          </p>
+
+          <div class="pt-4 border-t border-outline-variant/20 space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-primary text-xl">send</span>
+              <div class="flex-1">
+                <span class="text-xs text-on-surface-variant block">پشتیبانی و سفارش سریع در تلگرام:</span>
+                <a href="https://t.me/CedCinaSupport" target="_blank" class="text-sm font-mono text-primary hover:underline">@CedCinaSupport</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary text-xl">mail</span>
+              <div class="flex-1">
+                <span class="text-xs text-on-surface-variant block">پست الکترونیک رسمی:</span>
+                <a href="mailto:concierge@cedcina.io" class="text-sm font-mono text-on-surface hover:text-primary">concierge@cedcina.io</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-outline text-xl">call</span>
+              <div class="flex-1">
+                <span class="text-xs text-on-surface-variant block">تلفن روابط بین‌الملل:</span>
+                <span class="text-sm font-mono text-on-surface" dir="ltr">+81 3-5555-0199</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Working Hours & Guarantee -->
+        <div class="glass-panel p-6 rounded-2xl border border-outline-variant/30 flex items-center gap-4 bg-surface-container-low/50">
+          <div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center text-primary shrink-0">
+            <span class="material-symbols-outlined">schedule</span>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-on-surface">پاسخگویی برخط ۲۴ ساعته</h4>
+            <p class="text-xs text-on-surface-variant mt-0.5">پیام‌های تلگرام در کمتر از ۳۰ دقیقه توسط مشاور پاسخ داده می‌شوند.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Accordion Section -->
+    <section class="mt-24 pt-16 border-t border-outline-variant/20 max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-on-surface">پرسش‌های پرتکرار</h2>
+        <p class="text-sm text-on-surface-variant mt-2">پاسخ سریع به متداول‌ترین سوالات درباره ثبت سفارش، لنزها و ارسال</p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <div class="faq-item glass-panel rounded-2xl border border-outline-variant/20 overflow-hidden transition-all duration-300">
+          <button class="faq-question w-full p-6 text-right flex items-center justify-between gap-4">
+            <span class="text-base font-bold text-on-surface">پروتکل تحویل و ارسال سفارشات چگونه است؟</span>
+            <span class="material-symbols-outlined text-primary faq-icon transition-transform duration-300">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-sm text-on-surface-variant leading-relaxed border-t border-outline-variant/10 pt-4">
+            تمامی سفارش‌ها ظرف ۲۴ ساعت پس از نهایی‌سازی در جعبه‌های لوکس ضدضربه و مهروموم شده بسته‌بندی شده و با پست پیشتاز سریع به سراسر ایران ارسال می‌شوند. کد رهگیری پستی به شماره همراه یا تلگرام شما پیامک خواهد شد.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item glass-panel rounded-2xl border border-outline-variant/20 overflow-hidden transition-all duration-300">
+          <button class="faq-question w-full p-6 text-right flex items-center justify-between gap-4">
+            <span class="text-base font-bold text-on-surface">آیا امکان نصب لنزهای طبی با نمره چشم شخصی وجود دارد؟</span>
+            <span class="material-symbols-outlined text-primary faq-icon transition-transform duration-300">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-sm text-on-surface-variant leading-relaxed border-t border-outline-variant/10 pt-4">
+            بله، تمامی فریم‌های طبی و حتی مدل‌های آفتابی قابلیت تجهیز به عدسی‌های سفارشی مطابق با نسخه چشم‌پزشک شما (آنتی‌رفلکس، بلوکنترل، فتوکرومیک یا پلاریزه) را دارند. کافیست عکس نسخه را از طریق تلگرام برای کارشناسان ما ارسال کنید.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item glass-panel rounded-2xl border border-outline-variant/20 overflow-hidden transition-all duration-300">
+          <button class="faq-question w-full p-6 text-right flex items-center justify-between gap-4">
+            <span class="text-base font-bold text-on-surface">شرایط گارانتی و اصالت محصولات CedCina چیست؟</span>
+            <span class="material-symbols-outlined text-primary faq-icon transition-transform duration-300">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-sm text-on-surface-variant leading-relaxed border-t border-outline-variant/10 pt-4">
+            کلیه محصولات شامل گارانتی ۲۴ ماهه تعویض قطعات (لولا، پیچ‌های تیتانیومی و پدهای بینی) و ضمانت مادام‌العمر اصالت متریال تیتانیوم هستند. هر عینک همراه با کارت اصالت دیجیتال و کد سریال یکتا عرضه می‌گردد.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item glass-panel rounded-2xl border border-outline-variant/20 overflow-hidden transition-all duration-300">
+          <button class="faq-question w-full p-6 text-right flex items-center justify-between gap-4">
+            <span class="text-base font-bold text-on-surface">نحوه ثبت سفارش مستقیم از طریق تلگرام چگونه کار می‌کند؟</span>
+            <span class="material-symbols-outlined text-primary faq-icon transition-transform duration-300">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-sm text-on-surface-variant leading-relaxed border-t border-outline-variant/10 pt-4">
+            با کلیک روی دکمه «ثبت سفارش مستقیم در تلگرام» در سبد خرید، لیست کامل اقلام، قیمت‌ها و مشخصات به صورت خودکار در پیام تلگرام برای مشاور فروش ما آماده می‌شود. پس از ارسال پیام، شماره حساب یا درگاه پرداخت رسمی برای شما فرستاده خواهد شد.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Shared Component -->
+  <footer class="bg-surface-container-lowest w-full py-16 px-4 md:px-margin-desktop border-t border-outline-variant/20">
+    <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter direction-rtl text-right">
+      <div class="flex flex-col gap-4 items-start">
+        <div class="text-3xl font-black text-primary neon-glow">CedCina</div>
+        <p class="text-sm text-on-surface-variant max-w-xs leading-relaxed">
+          تغییر آینده عینک‌های لوکس از طریق دقت فنی، متریال‌های فضایی و تسلط بر زیبایی‌شناسی.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-3 items-start">
+        <h4 class="text-base font-bold text-on-surface mb-2">قوانین</h4>
+        <a class="text-sm text-on-surface-variant hover:text-secondary transition-all" href="about.html">حریم خصوصی</a>
+        <a class="text-sm text-on-surface-variant hover:text-secondary transition-all" href="about.html">شرایط استفاده</a>
+      </div>
+
+      <div class="flex flex-col gap-3 items-start">
+        <h4 class="text-base font-bold text-on-surface mb-2">پشتیبانی</h4>
+        <a class="text-sm text-on-surface-variant hover:text-secondary transition-all" href="contact.html">ارسال و بازگشت</a>
+        <a class="text-sm text-on-surface-variant hover:text-secondary transition-all" href="contact.html">سوالات متداول</a>
+      </div>
+
+      <div class="flex flex-col gap-3 items-start">
+        <h4 class="text-base font-bold text-on-surface mb-2">همراه ما باشید</h4>
+        <p class="text-xs text-on-surface-variant">عضویت در خبرنامه کلکسیون‌های فصلی:</p>
+        <div class="w-full mt-2 relative">
+          <input class="w-full bg-surface-container-low border border-outline-variant/50 rounded-lg px-4 py-3 text-sm text-on-surface focus:outline-none focus:border-primary transition-colors text-left" dir="ltr" placeholder="ایمیل خود را وارد کنید" type="email"/>
+          <button class="absolute top-1 left-1 bottom-1 bg-primary text-on-primary px-3 rounded-md hover:bg-primary-fixed transition-colors flex items-center justify-center" onclick="showToast('ایمیل شما با موفقیت در خبرنامه ثبت گردید.')">
+            <span class="material-symbols-outlined text-sm">arrow_back</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-span-1 md:col-span-4 mt-12 pt-8 border-t border-outline-variant/10 text-center md:text-right flex flex-col md:flex-row justify-between items-center gap-4">
+        <span class="text-xs text-on-surface-variant">© 2024 CedCina Luxury Eyewear. تمامی حقوق محفوظ است.</span>
+        <span class="text-xs text-primary/80">آماده استقرار مستقیم روی GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla Core Script -->
+  <script src="assets/app.js"></script>
+
+  <!-- Page-specific Contact & FAQ Engine -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // FAQ Accordion
+      document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.faq-item');
+          const answer = item.querySelector('.faq-answer');
+          const icon = item.querySelector('.faq-icon');
+
+          const isHidden = answer.classList.contains('hidden');
+
+          // Close all answers
+          document.querySelectorAll('.faq-answer').forEach(a => a.classList.add('hidden'));
+          document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = 'rotate(0deg)');
+
+          if (isHidden) {
+            answer.classList.remove('hidden');
+            icon.style.transform = 'rotate(180deg)';
+          }
+        });
+      });
+
+      // Contact Form Handlers
+      const telegramBtn = document.getElementById('send-telegram-btn');
+      const submitSiteBtn = document.getElementById('submit-site-btn');
+      const nameInput = document.getElementById('contact-name');
+      const emailInput = document.getElementById('contact-email');
+      const subjectSelect = document.getElementById('contact-subject');
+      const messageInput = document.getElementById('contact-message');
+
+      function validateForm() {
+        if (!nameInput.value.trim()) {
+          showToast("لطفاً نام و نام خانوادگی خود را وارد نمایید.");
+          nameInput.focus();
+          return false;
+        }
+        if (!emailInput.value.trim() || !emailInput.value.includes('@')) {
+          showToast("لطفاً یک آدرس ایمیل معتبر وارد نمایید.");
+          emailInput.focus();
+          return false;
+        }
+        if (!messageInput.value.trim()) {
+          showToast("لطفاً متن پیام خود را بنویسید.");
+          messageInput.focus();
+          return false;
+        }
+        return true;
+      }
+
+      if (telegramBtn) {
+        telegramBtn.addEventListener('click', () => {
+          if (!validateForm()) return;
+
+          const text = `سلام، پیامی از طریق فرم تماس وب‌سایت CedCina ارسال شده است:\n\n` +
+            `👤 فرستنده: ${nameInput.value.trim()}\n` +
+            `📧 ایمیل: ${emailInput.value.trim()}\n` +
+            `📌 موضوع: ${subjectSelect.value}\n\n` +
+            `📝 متن پیام:\n${messageInput.value.trim()}\n\n` +
+            `📅 تاریخ: ${new Date().toLocaleDateString('fa-IR')}`;
+
+          const url = `https://t.me/${TELEGRAM_USERNAME}?text=${encodeURIComponent(text)}`;
+          window.open(url, '_blank');
+          showToast("پیام آماده ارسال در تلگرام شد.");
+        });
+      }
+
+      if (submitSiteBtn) {
+        submitSiteBtn.addEventListener('click', () => {
+          if (!validateForm()) return;
+
+          showToast("پیام شما با موفقیت در سامانه ثبت گردید. به زودی پاسخ داده خواهد شد.");
+          nameInput.value = '';
+          emailInput.value = '';
+          messageInput.value = '';
+        });
+      }
+    });
+  </script>
+</body>
+</html>
