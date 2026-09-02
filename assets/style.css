@@ -1,0 +1,147 @@
+/* CedCina Luxury Eyewear - Custom Cyber-Luxury & Glassmorphic Styles */
+
+:root {
+  --color-surface: #11131b;
+  --color-surface-dim: #11131b;
+  --color-surface-bright: #373941;
+  --color-surface-lowest: #0c0e15;
+  --color-surface-low: #1a1b23;
+  --color-surface-container: #1e1f27;
+  --color-surface-high: #282a32;
+  --color-on-surface: #e2e1ed;
+  --color-on-surface-variant: #c4c5d7;
+  --color-primary: #b6c4ff;
+  --color-primary-container: #305de3;
+  --color-on-primary: #002780;
+  --color-secondary: #e1b6ff;
+  --color-secondary-container: #6c1ca3;
+  --color-outline: #8e90a0;
+  --color-outline-variant: #434654;
+}
+
+/* Glassmorphism & Cyber-Luxury */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(182, 196, 255, 0.12);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+  box-shadow: 0 0 25px rgba(182, 196, 255, 0.18);
+  border-color: rgba(182, 196, 255, 0.35);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-hover {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  box-shadow: 0 0 25px rgba(182, 196, 255, 0.22);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(182, 196, 255, 0.45);
+  transform: translateY(-3px);
+}
+
+.neon-glow-hover:hover {
+  box-shadow: 0 0 25px rgba(182, 196, 255, 0.25);
+  border-color: rgba(182, 196, 255, 0.5);
+}
+
+.btn-primary-glow {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 18px rgba(48, 93, 227, 0.45);
+  transition: all 0.3s ease;
+}
+
+.btn-primary-glow:hover {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 0 28px rgba(48, 93, 227, 0.75);
+  transform: translateY(-1px);
+}
+
+.neon-glow {
+  text-shadow: 0 0 12px rgba(182, 196, 255, 0.55);
+}
+
+.neon-text-glow {
+  text-shadow: 0 0 15px rgba(182, 196, 255, 0.6), 0 0 30px rgba(182, 196, 255, 0.3);
+}
+
+.neon-input {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(67, 70, 84, 0.6);
+  transition: all 0.25s ease;
+}
+
+.neon-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 15px rgba(182, 196, 255, 0.25);
+  outline: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0c0e15;
+}
+::-webkit-scrollbar-thumb {
+  background: #282a32;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b6c4ff;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Cart Drawer Animation */
+#cart-drawer {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+}
+#cart-drawer.open {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+#cart-backdrop {
+  transition: opacity 0.3s ease;
+}
+#cart-backdrop.open {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* Toast animations */
+.toast-enter {
+  transform: translateY(100px) scale(0.9);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.toast-enter-active {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+.toast-exit {
+  transform: translateY(50px) scale(0.95);
+  opacity: 0;
+  transition: all 0.25s ease-in;
+}
+
+/* Modal animations */
+.modal-backdrop {
+  transition: opacity 0.25s ease;
+}
+.modal-box {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+}
